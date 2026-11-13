@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Soft luxury gradients -->
+    <linearGradient id="mauveGrad" x1="20" y1="10" x2="100" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#845D6D" />
+      <stop offset="60%" stop-color="#654653" />
+      <stop offset="100%" stop-color="#49303A" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="30" y1="20" x2="90" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2D8D6" />
+      <stop offset="100%" stop-color="#C99692" />
+    </linearGradient>
+    <linearGradient id="sageGrad" x1="40" y1="30" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C5D3C1" />
+      <stop offset="100%" stop-color="#7B9375" />
+    </linearGradient>
+    <radialGradient id="haloGlow" cx="60" cy="60" r="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBF5EF" stop-opacity="0.9" />
+      <stop offset="85%" stop-color="#F5EAE6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#EADBCE" stop-opacity="0.4" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Protective Warm Canvas -->
+  <circle cx="60" cy="60" r="56" fill="url(#haloGlow)" stroke="#E8DDD2" stroke-width="1.5" />
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#E8C7C4" stroke-width="0.75" stroke-dasharray="2 3" opacity="0.6" />
+
+  <!-- Botanical Sage Leaves (Flanking Base - Healing & Vitality) -->
+  <path d="M60 88 C45 84 32 72 34 58 C36 48 46 54 52 64 C56 72 59 82 60 88 Z" fill="url(#sageGrad)" opacity="0.85" />
+  <path d="M60 88 C75 84 88 72 86 58 C84 48 74 54 68 64 C64 72 61 82 60 88 Z" fill="url(#sageGrad)" opacity="0.85" />
+
+  <!-- Outer Flowing Embrace Petals (Forming the sculpted 'M' of Mangai & Maternal Arms) -->
+  <path d="M60 92 C46 90 28 78 28 54 C28 36 44 26 52 38 C56 44 58 54 60 62 C56 50 50 36 42 36 C34 36 34 48 36 58 C38 72 50 82 60 84 Z" fill="url(#mauveGrad)" />
+  <path d="M60 92 C74 90 92 78 92 54 C92 36 76 26 68 38 C64 44 62 54 60 62 C64 50 70 36 78 36 C86 36 86 48 84 58 C82 72 70 82 60 84 Z" fill="url(#mauveGrad)" />
+
+  <!-- Inner Blooming Petals / Mother-Child Arc (Dusty Rose) -->
+  <path d="M60 76 C52 74 42 66 42 52 C42 40 50 34 56 42 C58 45 59 52 60 58 C57 50 54 42 50 42 C46 42 46 48 48 54 C50 62 56 68 60 70 Z" fill="url(#roseGrad)" />
+  <path d="M60 76 C68 74 78 66 78 52 C78 40 70 34 64 42 C62 45 61 52 60 58 C63 50 66 42 70 42 C74 42 74 48 72 54 C70 62 64 68 60 70 Z" fill="url(#roseGrad)" />
+
+  <!-- Central Seed of Life / Delicate Blooming Bud (Fertility, New Life & Protection) -->
+  <path d="M60 30 C58 38 54 48 56 56 C57 60 60 63 60 63 C60 63 63 60 64 56 C66 48 62 38 60 30 Z" fill="url(#mauveGrad)" />
+
+  <!-- Nurturing Spark / Life Dewdrop -->
+  <circle cx="60" cy="46" r="2.5" fill="#FFFFFF" />
+  <circle cx="60" cy="27" r="1.5" fill="#654653" />
+</svg>
