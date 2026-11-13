@@ -6,23 +6,23 @@
   --color-warm-ivory-dark: #F3E7DC;
   
   --color-dusty-rose: #E8C7C4;
-  --color-dusty-rose-light: #F6EBE9;
+  --color-dusty-rose-light: #F7EFEB;
   --color-dusty-rose-dark: #C99692;
   
   --color-sage-green: #A9B9A4;
-  --color-sage-green-light: #E4ECE2;
-  --color-sage-green-dark: #4A6348;
+  --color-sage-green-light: #E7EFE5;
+  --color-sage-green-dark: #3F593D;
   
   --color-deep-mauve: #654653;
-  --color-deep-mauve-dark: #49303A;
-  --color-deep-mauve-light: #845D6D;
-  --color-deep-mauve-muted: #F3EDF0;
+  --color-deep-mauve-dark: #472F3A;
+  --color-deep-mauve-light: #825D6C;
+  --color-deep-mauve-muted: #F2ECF0;
 
   --color-soft-white: #FFFFFF;
-  --color-warm-charcoal: #383331;
-  --color-warm-gray: #665F5C;
-  --color-warm-gray-light: #9B918E;
-  --color-warm-border: #E8DDD3;
+  --color-warm-charcoal: #2E2927;
+  --color-warm-gray: #6B625E;
+  --color-warm-gray-light: #9E9490;
+  --color-warm-border: #E8DDD2;
   
   --font-serif: var(--font-lora), "Lora", Georgia, serif;
   --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
@@ -30,7 +30,7 @@
 
 :root {
   --background: #FBF5EF;
-  --foreground: #383331;
+  --foreground: #2E2927;
 }
 
 body {
@@ -39,15 +39,25 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Subtle, natural healthcare shadows */
+.shadow-healthcare {
+  box-shadow: 0 4px 20px -2px rgba(101, 70, 83, 0.06), 0 2px 6px -1px rgba(101, 70, 83, 0.04);
 }
 
-/* Custom delicate focus rings for healthcare accessibility */
+.shadow-healthcare-hover {
+  box-shadow: 0 12px 32px -4px rgba(101, 70, 83, 0.1), 0 4px 12px -2px rgba(101, 70, 83, 0.06);
+}
+
+/* Accessible focus ring */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 2px solid #654653;
-  outline-offset: 2px;
+  outline-offset: 3px;
+}
+
+/* Prevent text overflow on small mobile screens */
+h1, h2, h3, h4, p, span {
+  overflow-wrap: break-word;
 }

@@ -7,8 +7,6 @@ import {
   ShieldCheck,
   Calendar,
   Phone,
-  HelpCircle,
-  AlertCircle,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -50,22 +48,22 @@ export default function FertilityCarePage() {
       <FaqJsonLd faqs={service.faqs} />
       <Header />
 
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 pb-24 sm:pb-0">
         {/* Breadcrumb Bar */}
         <div className="bg-warm-ivory border-b border-warm-border/60">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <Breadcrumbs items={[{ label: "Fertility Care & Preconception", href: "/fertility-care" }]} />
           </div>
         </div>
 
-        {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-gradient-to-b from-warm-ivory via-warm-ivory-light to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl space-y-4">
-              <span className="inline-block px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-deep-mauve bg-dusty-rose/40 rounded-full">
+        {/* Hero Section with Breathing Room */}
+        <section className="py-16 sm:py-24 lg:py-28 bg-gradient-to-b from-warm-ivory via-warm-ivory-light to-white">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="max-w-3xl space-y-5">
+              <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-deep-mauve bg-dusty-rose/40 rounded-full">
                 Preconception &amp; Fertility • Salem
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl text-warm-charcoal font-normal leading-tight">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-warm-charcoal font-normal leading-tight">
                 Compassionate, Medically Grounded Fertility Guidance
               </h1>
               <p className="text-base sm:text-lg text-warm-gray leading-relaxed">
@@ -73,24 +71,24 @@ export default function FertilityCarePage() {
               </p>
 
               {/* Ethical Medical Disclaimer Banner */}
-              <div className="p-4 rounded-2xl bg-dusty-rose-light/50 border border-dusty-rose/60 flex items-start gap-3 text-xs text-warm-charcoal">
+              <div className="p-5 rounded-3xl bg-dusty-rose-light/50 border border-dusty-rose/60 flex items-start gap-3.5 text-xs sm:text-sm text-warm-charcoal">
                 <ShieldCheck className="w-5 h-5 text-deep-mauve shrink-0 mt-0.5" />
                 <p className="leading-relaxed">
                   <strong>Our Medical Commitment:</strong> We practice honest, evidence-based medicine. We never guarantee pregnancy or promote aggressive treatments prematurely. Our role is to identify physiological factors, optimize your health, and provide realistic, supportive medical care.
                 </p>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
                 <a
                   href="#book-appointment"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-deep-mauve text-white text-sm font-medium hover:bg-deep-mauve-dark transition-all shadow-xs"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-deep-mauve text-white text-sm font-medium hover:bg-deep-mauve-dark transition-all shadow-xs"
                 >
                   <Calendar className="w-4 h-4 text-dusty-rose" />
                   <span>Book Couple Consultation</span>
                 </a>
                 <a
                   href={CLINIC_INFO.contact.phoneHref}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-warm-border text-warm-charcoal text-sm font-medium hover:border-deep-mauve transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white border border-warm-border text-warm-charcoal text-sm font-medium hover:border-deep-mauve transition-all"
                 >
                   <Phone className="w-4 h-4 text-deep-mauve" />
                   <span>Call: +91 99444 66729</span>
@@ -101,69 +99,69 @@ export default function FertilityCarePage() {
         </section>
 
         {/* Step-by-Step Diagnostic Roadmap */}
-        <section className="py-16 bg-white border-y border-warm-border/60">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mb-12">
+        <section className="py-20 sm:py-28 bg-white border-y border-warm-border/60">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-14 sm:mb-18">
               <span className="text-xs font-semibold uppercase tracking-wider text-deep-mauve">
                 A Step-by-Step Approach
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-warm-charcoal mt-1">
+              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-warm-charcoal mt-1.5">
                 How We Approach Fertility Assessment
               </h2>
-              <p className="text-sm text-warm-gray mt-2 leading-relaxed">
+              <p className="text-base text-warm-gray mt-2 leading-relaxed">
                 We start with simple, non-invasive investigations before considering complex procedures, keeping care accessible and transparent.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Step 1 */}
-              <div className="bg-warm-ivory rounded-3xl p-6 border border-warm-border space-y-3">
+              <div className="bg-warm-ivory rounded-3xl p-7 border border-warm-border space-y-3.5">
                 <span className="text-xs font-bold text-deep-mauve tracking-wider uppercase">
                   Step 01
                 </span>
-                <h3 className="font-serif text-lg font-semibold text-warm-charcoal">
+                <h3 className="font-serif text-xl font-semibold text-warm-charcoal">
                   Couple History &amp; Lifestyle
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs sm:text-sm text-warm-gray leading-relaxed">
                   Understanding menstrual cycles, coital timing, stress levels, nutrition, sleep, and previous health history for both partners.
                 </p>
               </div>
 
               {/* Step 2 */}
-              <div className="bg-warm-ivory rounded-3xl p-6 border border-warm-border space-y-3">
+              <div className="bg-warm-ivory rounded-3xl p-7 border border-warm-border space-y-3.5">
                 <span className="text-xs font-bold text-deep-mauve tracking-wider uppercase">
                   Step 02
                 </span>
-                <h3 className="font-serif text-lg font-semibold text-warm-charcoal">
+                <h3 className="font-serif text-xl font-semibold text-warm-charcoal">
                   Ovulation &amp; Ovarian Reserve
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs sm:text-sm text-warm-gray leading-relaxed">
                   Follicular ultrasound scans to observe egg maturity and endometrial lining, complemented by basic hormonal profiling (AMH, FSH, Thyroid).
                 </p>
               </div>
 
               {/* Step 3 */}
-              <div className="bg-warm-ivory rounded-3xl p-6 border border-warm-border space-y-3">
+              <div className="bg-warm-ivory rounded-3xl p-7 border border-warm-border space-y-3.5">
                 <span className="text-xs font-bold text-deep-mauve tracking-wider uppercase">
                   Step 03
                 </span>
-                <h3 className="font-serif text-lg font-semibold text-warm-charcoal">
+                <h3 className="font-serif text-xl font-semibold text-warm-charcoal">
                   Uterine &amp; Male Factors
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs sm:text-sm text-warm-gray leading-relaxed">
                   Pelvic scans to rule out fibroids or polyps, along with routine semen analysis referral to assess count and motility.
                 </p>
               </div>
 
               {/* Step 4 */}
-              <div className="bg-warm-ivory rounded-3xl p-6 border border-warm-border space-y-3">
+              <div className="bg-warm-ivory rounded-3xl p-7 border border-warm-border space-y-3.5">
                 <span className="text-xs font-bold text-deep-mauve tracking-wider uppercase">
                   Step 04
                 </span>
-                <h3 className="font-serif text-lg font-semibold text-warm-charcoal">
+                <h3 className="font-serif text-xl font-semibold text-warm-charcoal">
                   Guided Medical Support
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs sm:text-sm text-warm-gray leading-relaxed">
                   Gentle cycle regulation, ovulation induction, timed intercourse guidance, or ethical referral to specialized centers when appropriate.
                 </p>
               </div>
@@ -171,35 +169,35 @@ export default function FertilityCarePage() {
           </div>
         </section>
 
-        {/* Preconception Health & Wellness */}
-        <section className="py-16 bg-warm-ivory-light">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        {/* Preconception Health & Wellness with Breathing Room */}
+        <section className="py-20 sm:py-28 bg-warm-ivory-light">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               <div className="lg:col-span-6 space-y-4">
                 <span className="text-xs font-semibold uppercase tracking-wider text-deep-mauve">
                   Planning Ahead
                 </span>
-                <h2 className="font-serif text-3xl font-semibold text-warm-charcoal leading-tight">
+                <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-warm-charcoal leading-tight">
                   Preconception Counseling for Healthy Pregnancies
                 </h2>
-                <p className="text-sm text-warm-gray leading-relaxed">
+                <p className="text-base text-warm-gray leading-relaxed">
                   Planning a pregnancy before conception significantly reduces risks of birth defects, gestational diabetes, and complications. During a preconception consultation in Salem, Dr. Sornam assists couples with:
                 </p>
 
-                <div className="space-y-2.5 text-xs text-warm-gray pt-2">
-                  <div className="flex items-start gap-2 bg-white p-3 rounded-xl border border-warm-border">
+                <div className="space-y-3 text-xs sm:text-sm text-warm-gray pt-2">
+                  <div className="flex items-start gap-2.5 bg-white p-3.5 rounded-2xl border border-warm-border">
                     <CheckCircle className="w-4 h-4 text-sage-green-dark shrink-0 mt-0.5" />
                     <span>Folic acid supplementation &amp; micronutrient optimization</span>
                   </div>
-                  <div className="flex items-start gap-2 bg-white p-3 rounded-xl border border-warm-border">
+                  <div className="flex items-start gap-2.5 bg-white p-3.5 rounded-2xl border border-warm-border">
                     <CheckCircle className="w-4 h-4 text-sage-green-dark shrink-0 mt-0.5" />
                     <span>Screening for rubella immunity, anemia, blood group typing, and thyroid levels</span>
                   </div>
-                  <div className="flex items-start gap-2 bg-white p-3 rounded-xl border border-warm-border">
+                  <div className="flex items-start gap-2.5 bg-white p-3.5 rounded-2xl border border-warm-border">
                     <CheckCircle className="w-4 h-4 text-sage-green-dark shrink-0 mt-0.5" />
                     <span>Optimizing chronic conditions (diabetes, hypertension, thyroid disorders) before pregnancy</span>
                   </div>
-                  <div className="flex items-start gap-2 bg-white p-3 rounded-xl border border-warm-border">
+                  <div className="flex items-start gap-2.5 bg-white p-3.5 rounded-2xl border border-warm-border">
                     <CheckCircle className="w-4 h-4 text-sage-green-dark shrink-0 mt-0.5" />
                     <span>Healthy weight targets, lifestyle modifications, and stress reduction</span>
                   </div>
@@ -208,17 +206,17 @@ export default function FertilityCarePage() {
 
               {/* Emotional Support Callout */}
               <div className="lg:col-span-6">
-                <div className="bg-white rounded-3xl p-8 border border-warm-border shadow-xs space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-dusty-rose-light text-deep-mauve flex items-center justify-center">
-                    <Heart className="w-6 h-6" />
+                <div className="bg-white rounded-3xl p-8 sm:p-10 border border-warm-border shadow-xs space-y-5">
+                  <div className="w-14 h-14 rounded-2xl bg-dusty-rose-light text-deep-mauve flex items-center justify-center">
+                    <Heart className="w-7 h-7" />
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-warm-charcoal">
+                  <h3 className="font-serif text-2xl font-semibold text-warm-charcoal">
                     Guilt-Free, Respectful Care
                   </h3>
-                  <p className="text-sm text-warm-gray leading-relaxed">
+                  <p className="text-sm sm:text-base text-warm-gray leading-relaxed">
                     Societal pressures and intrusive questions can make trying to conceive deeply taxing for both partners. At Mangai Clinic, we create a sanctuary where couples are treated with dignity, kindness, and non-judgmental reassurance.
                   </p>
-                  <p className="text-xs text-warm-gray/90 italic pt-1 border-t border-warm-border/60">
+                  <p className="text-xs sm:text-sm text-warm-gray/90 italic pt-2 border-t border-warm-border/60">
                     &ldquo;You are never a case or a statistic to us. We partner with you with scientific honesty and compassion.&rdquo;
                   </p>
                 </div>
@@ -228,27 +226,27 @@ export default function FertilityCarePage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white border-t border-warm-border">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-3 mb-10">
+        <section className="py-20 sm:py-28 bg-white border-t border-warm-border">
+          <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="text-center space-y-3.5 mb-14">
               <span className="text-xs font-semibold uppercase tracking-wider text-deep-mauve">
                 Couples&apos; Questions
               </span>
-              <h2 className="font-serif text-3xl font-normal text-warm-charcoal">
+              <h2 className="font-serif text-3xl sm:text-4xl font-normal text-warm-charcoal">
                 Frequently Asked Fertility Questions
               </h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {service.faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-warm-ivory/50 rounded-2xl p-6 border border-warm-border space-y-2"
+                  className="bg-warm-ivory/60 rounded-3xl p-7 sm:p-8 border border-warm-border space-y-2.5"
                 >
-                  <h3 className="font-serif text-lg font-semibold text-deep-mauve">
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-deep-mauve">
                     {faq.question}
                   </h3>
-                  <p className="text-sm text-warm-gray leading-relaxed">
+                  <p className="text-sm sm:text-base text-warm-gray leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -269,4 +267,3 @@ export default function FertilityCarePage() {
     </>
   );
 }
-
