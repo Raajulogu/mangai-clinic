@@ -12,22 +12,23 @@ export default function Logo({
   variant = "header",
 }: LogoProps) {
   const isFooter = variant === "footer";
+  const isHeader = variant === "header";
 
   return (
     <Link
       href="/"
-      className={`group inline-flex items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-mauve focus-visible:ring-offset-2 rounded-xl ${className}`}
+      className={`group inline-flex items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-mauve focus-visible:ring-offset-2 rounded-xl shrink-0 ${className}`}
       aria-label="Mangai Clinic Salem - Home"
     >
       {/* Custom Designed Brand Emblem */}
       <div className="relative flex items-center justify-center shrink-0">
         <svg
-          width="48"
-          height="48"
+          width="44"
+          height="44"
           viewBox="0 0 120 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-11 h-11 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105"
+          className="w-10 h-10 sm:w-11 sm:h-11 transition-transform duration-300 group-hover:scale-105"
           aria-hidden="true"
         >
           <defs>
@@ -71,7 +72,7 @@ export default function Logo({
             opacity={isFooter ? "0.4" : "0.6"}
           />
 
-          {/* Botanical Sage Leaves (Flanking Base - Healing & Vitality) */}
+          {/* Botanical Sage Leaves */}
           <path
             d="M60 88 C45 84 32 72 34 58 C36 48 46 54 52 64 C56 72 59 82 60 88 Z"
             fill={`url(#emblemSage-${variant})`}
@@ -83,7 +84,7 @@ export default function Logo({
             opacity="0.85"
           />
 
-          {/* Outer Flowing Embrace Petals (The 'M' of Mangai & Maternal Protective Arms) */}
+          {/* Outer Flowing Petals / 'M' Wings */}
           <path
             d="M60 92 C46 90 28 78 28 54 C28 36 44 26 52 38 C56 44 58 54 60 62 C56 50 50 36 42 36 C34 36 34 48 36 58 C38 72 50 82 60 84 Z"
             fill={`url(#emblemMauve-${variant})`}
@@ -93,7 +94,7 @@ export default function Logo({
             fill={`url(#emblemMauve-${variant})`}
           />
 
-          {/* Inner Blooming Petals / Mother-Child Arc (Dusty Rose) */}
+          {/* Inner Blooming Petals */}
           <path
             d="M60 76 C52 74 42 66 42 52 C42 40 50 34 56 42 C58 45 59 52 60 58 C57 50 54 42 50 42 C46 42 46 48 48 54 C50 62 56 68 60 70 Z"
             fill={`url(#emblemRose-${variant})`}
@@ -103,30 +104,28 @@ export default function Logo({
             fill={`url(#emblemRose-${variant})`}
           />
 
-          {/* Central Seed of Life / Delicate Blooming Bud */}
+          {/* Central Bud & Dewdrop */}
           <path
             d="M60 30 C58 38 54 48 56 56 C57 60 60 63 60 63 C60 63 63 60 64 56 C66 48 62 38 60 30 Z"
             fill={`url(#emblemMauve-${variant})`}
           />
-
-          {/* Nurturing Center Spark */}
           <circle cx="60" cy="46" r="2.5" fill={isFooter ? "#4A333E" : "#FFFFFF"} />
           <circle cx="60" cy="27" r="1.5" fill={isFooter ? "#E8C7C4" : "#654653"} />
         </svg>
       </div>
 
       {/* Brand Typography */}
-      <div className="flex flex-col">
+      <div className="flex flex-col whitespace-nowrap">
         <div className="flex items-baseline gap-1.5">
           <span
-            className={`font-serif tracking-[0.14em] font-semibold uppercase leading-tight ${
-              isFooter ? "text-white text-xl sm:text-2xl" : "text-deep-mauve text-xl sm:text-2xl"
+            className={`font-serif tracking-[0.12em] font-semibold uppercase leading-tight ${
+              isFooter ? "text-white text-xl sm:text-2xl" : "text-deep-mauve text-lg sm:text-xl"
             }`}
           >
             Mangai
           </span>
           <span
-            className={`font-serif text-xs sm:text-sm uppercase tracking-[0.2em] font-normal ${
+            className={`font-serif text-xs uppercase tracking-[0.16em] font-normal ${
               isFooter ? "text-dusty-rose" : "text-warm-gray"
             }`}
           >
@@ -134,15 +133,23 @@ export default function Logo({
           </span>
         </div>
 
-        <span
-          className={`text-[10.5px] sm:text-[11px] font-semibold tracking-normal mt-0.5 ${
-            isFooter ? "text-sage-green-light" : "text-deep-mauve/85"
-          }`}
-        >
-          Women&apos;s Health &amp; Maternity • Salem
-        </span>
+        {/* Subtitle - in header, keep it compact and clean */}
+        {isHeader ? (
+          <span className="hidden sm:inline-block text-[10px] text-deep-mauve/80 font-medium tracking-normal mt-0.5">
+            Women&apos;s Health • Salem
+          </span>
+        ) : (
+          <span
+            className={`text-[11px] font-semibold tracking-normal mt-0.5 ${
+              isFooter ? "text-sage-green-light" : "text-deep-mauve/85"
+            }`}
+          >
+            Women&apos;s Health &amp; Maternity • Salem
+          </span>
+        )}
 
-        {showTamilSubtitle && (
+        {/* Tamil Subtitle shown on footer / non-header */}
+        {!isHeader && showTamilSubtitle && (
           <span
             className={`text-[10px] tracking-wide font-normal ${
               isFooter ? "text-white/60" : "text-warm-gray/80"
