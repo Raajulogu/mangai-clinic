@@ -15,6 +15,9 @@ import {
   Award,
 } from "lucide-react";
 import Header from "@/components/Header";
+import Head from "next/head";
+import Image from "next/image";
+
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import DoctorSpotlight from "@/components/DoctorSpotlight";
@@ -28,6 +31,15 @@ import { CLINIC_INFO, SERVICES_DATA, CLINIC_VALUES } from "@/lib/clinic-data";
 export default function HomePage() {
   return (
     <>
+      <Head>
+        <title>Mangai Clinic – Compassionate Women’s Healthcare in Salem</title>
+        <meta name="description" content="Obstetrics, Gynecology & Fertility care in Salem. Book appointments with Dr. R. M. Sornam Chokkalingam." />
+        <meta property="og:title" content="Mangai Clinic" />
+        <meta property="og:description" content="Compassionate care for every stage of womanhood." />
+        <meta property="og:image" content="/clinic-hero.jpg" />
+        <meta property="og:url" content="https://yourdomain.com" />
+      </Head>
+
       <ClinicJsonLd />
       <Header />
 
@@ -119,6 +131,8 @@ export default function HomePage() {
               {/* Right Column: Editorial Clinic Monograph Card (5 cols) */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-full max-w-md">
+                  <Image src="/clinic-hero.jpg" alt="Mangai Clinic hero" width={1200} height={600} className="rounded-2xl shadow-lg" priority />
+
                   <div className="bg-white rounded-3xl p-7 sm:p-9 shadow-healthcare border border-warm-border space-y-6">
                     {/* Header */}
                     <div className="flex items-center justify-between pb-5 border-b border-warm-border/70">
